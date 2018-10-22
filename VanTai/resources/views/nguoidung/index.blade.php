@@ -12,7 +12,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="vantai_asset/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vantai_asset/css/index.css">
-		<script src='https://www.google.com/recaptcha/api.js'></script>
+		{{-- <script src='https://www.google.com/recaptcha/api.js'></script> --}}
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,14 +45,14 @@
 							<nav class="navbar navbar-default bocuc_navbar" role="navigation">
 								<div class="container-fluid">
 									<!-- Brand and toggle get grouped for better mobile display -->
-									<div class="navbar-header">
+									<div class="navbar-header nonefloat">
 										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 											<span class="sr-only">Toggle navigation</span>
 											<span class="icon-bar"></span>
 											<span class="icon-bar"></span>
 											<span class="icon-bar"></span>
 										</button>
-										 <a class="navbar-brand" href="{{route('index')}}"><h1 class="hh1">TNHH Dịch Vụ <strong class="strong">Vận Tải Trường Thuận</strong></h1></a> 
+										 <a class="navbar-brand" href="{{route('index')}}"><h1 class="hh1">Công ty TNHH Dịch Vụ <strong class="strong">Vận Tải Trường Thuận</strong></h1></a> 
 									</div>
 							
 									<!-- Collect the nav links, forms, and other content for toggling -->

@@ -86,6 +86,7 @@ Route::get('admin/dangnhap','dangnhapController@getdangnhapadmin');
 Route::post('admin/dangnhap','dangnhapController@postdangnhapadmin')->name('dangnhapadmin');
 Route::get('admin/dangxuat', 'dangnhapController@getdangxuat')->name('logout');
 
-// Route::get('test','dangnhapController@test');
-
+Route::get('test', function() {
+     return view('nguoidung.trangchu');
+});
 

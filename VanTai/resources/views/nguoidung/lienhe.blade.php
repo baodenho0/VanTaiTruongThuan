@@ -47,10 +47,12 @@
 					</div>
 				</div>
 				
-
-
 				<div class="form-group">
-					<div class="col-sm-10 col-sm-offset-2">
+					<div class="col-md-5 col-xs-6">
+						<input type="text" class="form-control " id="exampleFormControlInput1" name="kq" placeholder="Nhập kết quả  {{$a}} + {{$b}} = ? ">
+						<input type="hidden" name="c" value="{{$c}}">
+					</div>
+					<div class="col-md-5 col-xs-6 ">
 						<button type="submit" class="btn btn-primary">Gửi liên hệ</button>
 					</div>
 				</div>

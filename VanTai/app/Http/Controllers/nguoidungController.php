@@ -12,9 +12,20 @@ use App\seo;
 use App\uudai;
 use App\yeucaulienhe;
 
+
+
+
 class nguoidungController extends Controller
 {
     //
+  
+
+    
+    public function ran(&$x,&$y,&$z){
+        $x=rand(0,5);
+        $y=rand(0,5);
+        $z= $x+$y;
+    }
 
     public function getindex(){
     	$bocuc = bocuc::first();
@@ -52,6 +63,12 @@ class nguoidungController extends Controller
         $data['bocuc'] = $bocuc;
         $data['seo'] = $seo;
         $data['lienhe'] = $lienhe;
+       
+       $this->ran($abc->a,$abc->b,$abc->c);
+        $data['a']= $abc->a;
+        $data['b']= $abc->b;
+        $data['c']= $abc->c;
+       
     	return view('nguoidung.lienhe',$data);
     }
 
@@ -73,11 +90,14 @@ class nguoidungController extends Controller
     }
 
     public function postyeucaulienhe(Request $request){
+      
         $this->validate($request,[
             'hoten'=>'required|min:3|max:50',
             'email'=>'required|min:3|max:50',
             'sdt'=>'required|min:7|max:20',
             'diachi'=>'required|min:3|max:1000',
+            'kq' => 'required|same:c',
+
            
         ],[
             'hoten.required'=>'Vui lòng nhập đầy đủ và chính xác các thông tin',
@@ -92,6 +112,8 @@ class nguoidungController extends Controller
             'email.max'=>'Vui lòng nhập đầy đủ và chính xác các thông tin',
             'sdt.max'=>'Vui lòng nhập đầy đủ và chính xác các thông tin',
             'diachi.max'=>'Vui lòng nhập đầy đủ và chính xác các thông tin',
+            'kq.required'=>'Chưa nhập kết quả',
+            'kq.same'=>'Kết quả không chính xác',
 
         ]);
         $yeucaulienhe = new yeucaulienhe;
